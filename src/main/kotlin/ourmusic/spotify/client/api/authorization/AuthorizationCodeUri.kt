@@ -3,7 +3,9 @@ package ourmusic.spotify.client.api.authorization
 import com.wrapper.spotify.SpotifyApi
 import com.wrapper.spotify.SpotifyHttpManager
 import com.wrapper.spotify.requests.authorization.authorization_code.AuthorizationCodeUriRequest
+import ourmusic.spotify.client.vo.AuthURIResponse
 import ourmusic.spotify.client.vo.SpotifyCredentials
+import java.net.URI
 
 
 class AuthorizationCodeUri(private val accessCredentials: SpotifyCredentials){
@@ -20,9 +22,10 @@ class AuthorizationCodeUri(private val accessCredentials: SpotifyCredentials){
             //          .show_dialog(true)
             .build()
 
-    public fun authorizationCodeUri_Sync() {
+    public fun authorizationCodeUri_Sync(): AuthURIResponse {
         val uri = authorizationCodeUriRequest.execute()
         println("URI: $uri")
+        return AuthURIResponse(uri)
     }
 
 }
