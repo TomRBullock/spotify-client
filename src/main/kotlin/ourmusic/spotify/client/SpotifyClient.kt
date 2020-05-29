@@ -6,6 +6,7 @@ import com.wrapper.spotify.requests.authorization.authorization_code.Authorizati
 import ourmusic.spotify.client.api.authorization.AuthorizationCodeRefresh
 import ourmusic.spotify.client.api.authorization.AuthorizationCodeRequest
 import ourmusic.spotify.client.api.authorization.AuthorizationCodeUri
+import ourmusic.spotify.client.api.user.CurrentUserDetails
 import ourmusic.spotify.client.vo.SpotifyCredentials
 
 class SpotifyClient(accessCredentials: SpotifyCredentials) {
@@ -14,8 +15,11 @@ class SpotifyClient(accessCredentials: SpotifyCredentials) {
     private val authorizationCodeRequest: AuthorizationCodeRequest  = AuthorizationCodeRequest(accessCredentials)
     private val authorizationCodeUri: AuthorizationCodeUri          = AuthorizationCodeUri(accessCredentials)
 
+    private val currentUserDetails: CurrentUserDetails  = CurrentUserDetails()
+
     fun authCodeRefresh() = authorizationCodeRefresh
     fun authCodeRequest() = authorizationCodeRequest
     fun authCodeUri()     = authorizationCodeUri
 
+    fun currentUserDetails()    = currentUserDetails
 }
