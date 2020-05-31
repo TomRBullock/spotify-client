@@ -1,9 +1,5 @@
 package ourmusic.spotify.client;
 
-import com.wrapper.spotify.SpotifyApi;
-import com.wrapper.spotify.SpotifyHttpManager;
-import com.wrapper.spotify.requests.authorization.authorization_code.AuthorizationCodeUriRequest;
-import javafx.scene.control.Toggle
 import ourmusic.spotify.client.api.authorization.AuthorizationCodeRefresh
 import ourmusic.spotify.client.api.authorization.AuthorizationCodeRequest
 import ourmusic.spotify.client.api.authorization.AuthorizationCodeUri

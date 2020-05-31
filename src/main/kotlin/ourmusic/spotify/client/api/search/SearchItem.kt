@@ -1,10 +1,8 @@
 package ourmusic.spotify.client.api.search
 
 import com.wrapper.spotify.SpotifyApi
-import com.wrapper.spotify.exceptions.SpotifyWebApiException
 import com.wrapper.spotify.model_objects.special.SearchResult
 import ourmusic.spotify.client.api.BaseService
-import java.io.IOException
 
 
 class SearchItem: BaseService() {

@@ -1,11 +1,9 @@
 package ourmusic.spotify.client.api.authorization
 
 import com.wrapper.spotify.SpotifyApi
-import com.wrapper.spotify.exceptions.SpotifyWebApiException
 import com.wrapper.spotify.model_objects.credentials.AuthorizationCodeCredentials
 import ourmusic.spotify.client.api.BaseService
 import ourmusic.spotify.client.vo.SpotifyCredentials
-import java.io.IOException
 
 
 class AuthorizationCodeRefresh(private val refreshCredentials: SpotifyCredentials): BaseService() {
