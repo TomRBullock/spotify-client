@@ -18,7 +18,7 @@ class AuthorizationCodeUri(private val accessCredentials: SpotifyCredentials): B
 
     private val authorizationCodeUriRequest: AuthorizationCodeUriRequest = spotifyApi.authorizationCodeUri()
             //          .state("x4xkmn9pu3j6ukrs8n")
-            //          .scope("user-read-birthdate,user-read-email")
+                      .scope(accessCredentials.scope)
             //          .show_dialog(true)
             .build()
 
