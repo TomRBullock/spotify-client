@@ -1,9 +1,7 @@
 package ourmusic.spotify.client.api.player
 
 import com.wrapper.spotify.SpotifyApi
-import com.wrapper.spotify.exceptions.SpotifyWebApiException
 import ourmusic.spotify.client.api.BaseService
-import java.io.IOException
 
 class TogglePlay(): BaseService() {
 
